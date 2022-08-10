@@ -10,7 +10,28 @@
     <link rel="stylesheet" href="./styles/main.css" />
     <script type="module" src="./scripts/main.js"></script>
   </head>
-  <body>
+  <body class="text-neutral-100 bg-primary-400">
     <h1 class="visually-hidden">Random Choice Picker</h1>
+
+    <main class="container">
+      <h2 class="text-center fs-500">
+        Enter all choices separated by a comma (,).<br />Press enter when done.
+      </h2>
+
+      <textarea
+        name="values"
+        id=""
+        cols="30"
+        rows="6"
+        class="form-field"
+        placeholder="Choices here..."
+      ></textarea>
+
+      <div class="tags" data-tags>
+        <div class="tag">Choice 1</div>
+        <div class="tag">Choice 1</div>
+        <div class="tag">Choice 1</div>
+      </div>
+    </main>
   </body>
 </html>

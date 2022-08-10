@@ -16,9 +16,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 :root {
+  --clr-primary-400: hsl(212, 87%, 55%);
+
+  --clr-accent-400: hsl(32, 87%, 55%);
+
   --clr-neutral-100: hsl(0, 0%, 100%);
-  --clr-neutral-200: hsl(0, 0%, 80%);
-  --clr-neutral-900: hsl(0, 0%, 0%);
+  --clr-neutral-200: hsl(0, 0%, 90%);
+  --clr-neutral-300: hsl(0, 0%, 80%);
+  --clr-neutral-400: hsl(0, 0%, 70%);
+  --clr-neutral-500: hsl(0, 0%, 60%);
+  --clr-neutral-600: hsl(0, 0%, 50%);
+  --clr-neutral-700: hsl(0, 0%, 40%);
+  --clr-neutral-800: hsl(0, 0%, 30%);
+  --clr-neutral-900: hsl(0, 0%, 20%);
+  --clr-neutral-1000: hsl(0, 0%, 10%);
+  --clr-neutral-1100: hsl(0, 0%, 0%);
 
   --ff-primary: "Open Sans", Arial, sans-serif;
   --ff-body: var(--ff-primary);
@@ -57,9 +69,46 @@ body {
   font-family: var(--ff-body);
   font-size: var(--fs-base);
   font-weight: var(--fw-regular);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 /** Content - General Styling **/
+.container {
+  --width: 48em;
+  --padding: var(--size-400);
+
+  width: min(var(--width), calc(100% - (var(--padding) * 2)));
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-400);
+}
+
+.form-field {
+  border: none;
+  padding: var(--size-200);
+  border-radius: var(--size-100);
+  background-color: var(--clr-neutral-100);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--size-400);
+}
+
+.tag {
+  padding: var(--size-200) var(--size-400);
+  background-color: var(--clr-accent-400);
+  border-radius: 100vmax;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.1em 0.2em 0.3em 0 rgba(0, 0, 0, 0.3);
+}
 
 /** Content - End **/
 
@@ -77,21 +126,113 @@ body {
 }
 
 /** Utility - Colours **/
+.text-primary-400 {
+  color: var(--clr-primary-400);
+}
+
+.text-accent-400 {
+  color: var(--clr-accent-400);
+}
+
 .text-neutral-100 {
   color: var(--clr-neutral-100);
+}
+
+.text-neutral-200 {
+  color: var(--clr-neutral-200);
+}
+
+.text-neutral-300 {
+  color: var(--clr-neutral-300);
+}
+
+.text-neutral-400 {
+  color: var(--clr-neutral-400);
+}
+
+.text-neutral-500 {
+  color: var(--clr-neutral-500);
+}
+
+.text-neutral-600 {
+  color: var(--clr-neutral-600);
+}
+
+.text-neutral-700 {
+  color: var(--clr-neutral-700);
+}
+
+.text-neutral-800 {
+  color: var(--clr-neutral-800);
 }
 
 .text-neutral-900 {
   color: var(--clr-neutral-900);
 }
 
+.text-neutral-1000 {
+  color: var(--clr-neutral-1000);
+}
+
+.text-neutral-1100 {
+  color: var(--clr-neutral-1100);
+}
+
 /** Utility - Background Colours **/
+.bg-primary-400 {
+  background-color: var(--clr-primary-400);
+}
+
+.bg-accent-400 {
+  background-color: var(--clr-accent-400);
+}
+
 .bg-neutral-100 {
   background-color: var(--clr-neutral-100);
 }
 
+.bg-neutral-100 {
+  background-color: var(--clr-neutral-100);
+}
+
+.bg-neutral-200 {
+  background-color: var(--clr-neutral-200);
+}
+
+.bg-neutral-300 {
+  background-color: var(--clr-neutral-300);
+}
+
+.bg-neutral-400 {
+  background-color: var(--clr-neutral-400);
+}
+
+.bg-neutral-500 {
+  background-color: var(--clr-neutral-500);
+}
+
+.bg-neutral-600 {
+  background-color: var(--clr-neutral-600);
+}
+
+.bg-neutral-700 {
+  background-color: var(--clr-neutral-700);
+}
+
+.bg-neutral-800 {
+  background-color: var(--clr-neutral-800);
+}
+
 .bg-neutral-900 {
   background-color: var(--clr-neutral-900);
+}
+
+.bg-neutral-1000 {
+  background-color: var(--clr-neutral-1000);
+}
+
+.bg-neutral-1100 {
+  background-color: var(--clr-neutral-1100);
 }
 
 /** Utility - Font Families **/
