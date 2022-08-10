@@ -4,9 +4,18 @@ const separator = `,`;
 
 formFieldElement.focus();
 
-formFieldElement.addEventListener(`input`, (e) => createTags(e.target.value));
+formFieldElement.addEventListener(`keyup`, (e) => {
+  createTags(e.target.value);
+
+  if (e.key === `Enter`) {
+    setTimeout(() => (e.target.value = ``), 10);
+    randomSelect();
+  }
+});
 
 const createTags = (input) => {
+  console.log(`== Create Tags ==`);
+
   const tags = input
     .split(separator)
     .filter((tag) => tag.trim() !== ``)
@@ -19,4 +28,8 @@ const createTags = (input) => {
     tagElement.innerText = tag;
     tagsElement.appendChild(tagElement);
   });
+};
+
+const randomSelect = () => {
+  console.log(`== Random Select ==`);
 };
